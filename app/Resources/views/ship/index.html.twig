@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ship list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Avalability</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ship in ships %}
+            <tr>
+                <td><a href="{{ path('ship_show', { 'id': ship.id }) }}">{{ ship.id }}</a></td>
+                <td>{{ ship.name }}</td>
+                <td>{{ ship.category }}</td>
+                <td>{% if ship.avalability %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ship_show', { 'id': ship.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ship_edit', { 'id': ship.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ship_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

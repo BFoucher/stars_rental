@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ship</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ship.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ ship.name }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ ship.category }}</td>
+            </tr>
+            <tr>
+                <th>Avalability</th>
+                <td>{% if ship.avalability %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ship_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('ship_edit', { 'id': ship.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

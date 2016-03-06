@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Renting list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Creationdate</th>
+                <th>Client</th>
+                <th>Ship</th>
+                <th>Outclassed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for renting in rentings %}
+            <tr>
+                <td><a href="{{ path('renting_show', { 'id': renting.id }) }}">{{ renting.id }}</a></td>
+                <td>{{ renting.creationDate|date('Y-m-d') }}</td>
+                <td>{{ renting.client }}</td>
+                <td>{{ renting.ship }}</td>
+                <td>{% if renting.outclassed %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('renting_show', { 'id': renting.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('renting_edit', { 'id': renting.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('renting_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

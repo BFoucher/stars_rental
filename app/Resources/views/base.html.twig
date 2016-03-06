@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <!-- <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"> -->
+        <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/custom.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Stars Rental</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href={{ path('renting_index') }}>Rent</a></li>
+            <li><a href={{ path('client_index') }}>Clients</a></li>
+            <li><a href={{ path('ship_index') }}>Ships</a></li>
+          </ul>
+        </div>
+      </nav>
+        <div class="container well"
+          {% block body %}{% endblock %}
+          {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+</html>
