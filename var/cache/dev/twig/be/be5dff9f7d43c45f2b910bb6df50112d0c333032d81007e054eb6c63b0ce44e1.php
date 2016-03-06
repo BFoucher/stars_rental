@@ -21,20 +21,20 @@ class __TwigTemplate_e9d9d358ddf5877de5498073ada666756e7b62e113285d16601e07fd735
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f9e9b06d284eacd2f7f8df0c8a1a4425301abcb28fa0c5dc99d989820d6b0aa3 = $this->env->getExtension("native_profiler");
-        $__internal_f9e9b06d284eacd2f7f8df0c8a1a4425301abcb28fa0c5dc99d989820d6b0aa3->enter($__internal_f9e9b06d284eacd2f7f8df0c8a1a4425301abcb28fa0c5dc99d989820d6b0aa3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "renting/show.html.twig"));
+        $__internal_21273159024aa9e0b0c7e8c94fee3fc191092ffe92475c7f6a7cde2f397b5a20 = $this->env->getExtension("native_profiler");
+        $__internal_21273159024aa9e0b0c7e8c94fee3fc191092ffe92475c7f6a7cde2f397b5a20->enter($__internal_21273159024aa9e0b0c7e8c94fee3fc191092ffe92475c7f6a7cde2f397b5a20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "renting/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f9e9b06d284eacd2f7f8df0c8a1a4425301abcb28fa0c5dc99d989820d6b0aa3->leave($__internal_f9e9b06d284eacd2f7f8df0c8a1a4425301abcb28fa0c5dc99d989820d6b0aa3_prof);
+        $__internal_21273159024aa9e0b0c7e8c94fee3fc191092ffe92475c7f6a7cde2f397b5a20->leave($__internal_21273159024aa9e0b0c7e8c94fee3fc191092ffe92475c7f6a7cde2f397b5a20_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_a6878f8a5bfef342793e2c7cd32b4dd783c38b78fa2ff1d81e8b716f4a92914b = $this->env->getExtension("native_profiler");
-        $__internal_a6878f8a5bfef342793e2c7cd32b4dd783c38b78fa2ff1d81e8b716f4a92914b->enter($__internal_a6878f8a5bfef342793e2c7cd32b4dd783c38b78fa2ff1d81e8b716f4a92914b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f89882172daa2d16c2b4d88ddc5a0e313cf91ec05b45626d9b56f387b301a06b = $this->env->getExtension("native_profiler");
+        $__internal_f89882172daa2d16c2b4d88ddc5a0e313cf91ec05b45626d9b56f387b301a06b->enter($__internal_f89882172daa2d16c2b4d88ddc5a0e313cf91ec05b45626d9b56f387b301a06b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Renting</h1>
@@ -53,7 +53,7 @@ class __TwigTemplate_e9d9d358ddf5877de5498073ada666756e7b62e113285d16601e07fd735
                 <td>";
         // line 14
         if ($this->getAttribute((isset($context["renting"]) ? $context["renting"] : $this->getContext($context, "renting")), "creationDate", array())) {
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["renting"]) ? $context["renting"] : $this->getContext($context, "renting")), "creationDate", array()), "Y-m-d H:i:s"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["renting"]) ? $context["renting"] : $this->getContext($context, "renting")), "creationDate", array()), "Y-m-d"), "html", null, true);
         }
         echo "</td>
             </tr>
@@ -98,7 +98,7 @@ class __TwigTemplate_e9d9d358ddf5877de5498073ada666756e7b62e113285d16601e07fd735
     </ul>
 ";
         
-        $__internal_a6878f8a5bfef342793e2c7cd32b4dd783c38b78fa2ff1d81e8b716f4a92914b->leave($__internal_a6878f8a5bfef342793e2c7cd32b4dd783c38b78fa2ff1d81e8b716f4a92914b_prof);
+        $__internal_f89882172daa2d16c2b4d88ddc5a0e313cf91ec05b45626d9b56f387b301a06b->leave($__internal_f89882172daa2d16c2b4d88ddc5a0e313cf91ec05b45626d9b56f387b301a06b_prof);
 
     }
 
@@ -130,7 +130,7 @@ class __TwigTemplate_e9d9d358ddf5877de5498073ada666756e7b62e113285d16601e07fd735
 /*             </tr>*/
 /*             <tr>*/
 /*                 <th>Creationdate</th>*/
-/*                 <td>{% if renting.creationDate %}{{ renting.creationDate|date('Y-m-d H:i:s') }}{% endif %}</td>*/
+/*                 <td>{% if renting.creationDate %}{{ renting.creationDate|date('Y-m-d') }}{% endif %}</td>*/
 /*             </tr>*/
 /*             <tr>*/
 /*                 <th>Outclassed</th>*/

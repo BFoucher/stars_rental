@@ -21,20 +21,20 @@ class __TwigTemplate_7a49f71847217869e4e10e2249cdf13cf0d6e710f654ebde834edca074e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9c85daf1872e2c17d13d69d763671af943784c140f4ed5d5543b55f0291c2535 = $this->env->getExtension("native_profiler");
-        $__internal_9c85daf1872e2c17d13d69d763671af943784c140f4ed5d5543b55f0291c2535->enter($__internal_9c85daf1872e2c17d13d69d763671af943784c140f4ed5d5543b55f0291c2535_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "renting/index.html.twig"));
+        $__internal_14227b539fe19c9b004dfd4d6732e2b8d0464761be81af9dcfd57d44964ea408 = $this->env->getExtension("native_profiler");
+        $__internal_14227b539fe19c9b004dfd4d6732e2b8d0464761be81af9dcfd57d44964ea408->enter($__internal_14227b539fe19c9b004dfd4d6732e2b8d0464761be81af9dcfd57d44964ea408_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "renting/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9c85daf1872e2c17d13d69d763671af943784c140f4ed5d5543b55f0291c2535->leave($__internal_9c85daf1872e2c17d13d69d763671af943784c140f4ed5d5543b55f0291c2535_prof);
+        $__internal_14227b539fe19c9b004dfd4d6732e2b8d0464761be81af9dcfd57d44964ea408->leave($__internal_14227b539fe19c9b004dfd4d6732e2b8d0464761be81af9dcfd57d44964ea408_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2498c114f7a5c238e5c1851da79dffa4c6a66fb735685d8c269ce84e090cfc50 = $this->env->getExtension("native_profiler");
-        $__internal_2498c114f7a5c238e5c1851da79dffa4c6a66fb735685d8c269ce84e090cfc50->enter($__internal_2498c114f7a5c238e5c1851da79dffa4c6a66fb735685d8c269ce84e090cfc50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e9bd569769e8d9823fb0b38431577f92dcfa24a59dba209ce3f5de2736046fd0 = $this->env->getExtension("native_profiler");
+        $__internal_e9bd569769e8d9823fb0b38431577f92dcfa24a59dba209ce3f5de2736046fd0->enter($__internal_e9bd569769e8d9823fb0b38431577f92dcfa24a59dba209ce3f5de2736046fd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Renting list</h1>
@@ -112,7 +112,7 @@ class __TwigTemplate_7a49f71847217869e4e10e2249cdf13cf0d6e710f654ebde834edca074e
 
     <ul>
         <li>
-            <a href=\"";
+            <a class=\"btn btn-primary btn-md\" href=\"";
         // line 42
         echo $this->env->getExtension('routing')->getPath("renting_new");
         echo "\">Create a new entry</a>
@@ -120,7 +120,7 @@ class __TwigTemplate_7a49f71847217869e4e10e2249cdf13cf0d6e710f654ebde834edca074e
     </ul>
 ";
         
-        $__internal_2498c114f7a5c238e5c1851da79dffa4c6a66fb735685d8c269ce84e090cfc50->leave($__internal_2498c114f7a5c238e5c1851da79dffa4c6a66fb735685d8c269ce84e090cfc50_prof);
+        $__internal_e9bd569769e8d9823fb0b38431577f92dcfa24a59dba209ce3f5de2736046fd0->leave($__internal_e9bd569769e8d9823fb0b38431577f92dcfa24a59dba209ce3f5de2736046fd0_prof);
 
     }
 
@@ -180,7 +180,7 @@ class __TwigTemplate_7a49f71847217869e4e10e2249cdf13cf0d6e710f654ebde834edca074e
 /* */
 /*     <ul>*/
 /*         <li>*/
-/*             <a href="{{ path('renting_new') }}">Create a new entry</a>*/
+/*             <a class="btn btn-primary btn-md" href="{{ path('renting_new') }}">Create a new entry</a>*/
 /*         </li>*/
 /*     </ul>*/
 /* {% endblock %}*/

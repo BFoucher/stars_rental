@@ -21,60 +21,81 @@ class __TwigTemplate_5a24c44a56bfec422b0330d89b205a5f4d84d4d2986da065991c7ae5391
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f610fa8736de2572cd01de80028682ec3564442b61a2aa8e353c9ae87a28e7e4 = $this->env->getExtension("native_profiler");
-        $__internal_f610fa8736de2572cd01de80028682ec3564442b61a2aa8e353c9ae87a28e7e4->enter($__internal_f610fa8736de2572cd01de80028682ec3564442b61a2aa8e353c9ae87a28e7e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ship/edit.html.twig"));
+        $__internal_4f4a12a122aef298ab07b84bfc830fc3308e3767406e9ac16263a3de0bb55685 = $this->env->getExtension("native_profiler");
+        $__internal_4f4a12a122aef298ab07b84bfc830fc3308e3767406e9ac16263a3de0bb55685->enter($__internal_4f4a12a122aef298ab07b84bfc830fc3308e3767406e9ac16263a3de0bb55685_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ship/edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f610fa8736de2572cd01de80028682ec3564442b61a2aa8e353c9ae87a28e7e4->leave($__internal_f610fa8736de2572cd01de80028682ec3564442b61a2aa8e353c9ae87a28e7e4_prof);
+        $__internal_4f4a12a122aef298ab07b84bfc830fc3308e3767406e9ac16263a3de0bb55685->leave($__internal_4f4a12a122aef298ab07b84bfc830fc3308e3767406e9ac16263a3de0bb55685_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d8c824540062dc6c6de099ccc9c4e3f98c4b65c5ce736046cb5e8da4312f09fd = $this->env->getExtension("native_profiler");
-        $__internal_d8c824540062dc6c6de099ccc9c4e3f98c4b65c5ce736046cb5e8da4312f09fd->enter($__internal_d8c824540062dc6c6de099ccc9c4e3f98c4b65c5ce736046cb5e8da4312f09fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fd34be0c52ddf9a89b1860efb9fa4e1787a991fab00845fc9febc4b7db4aea3b = $this->env->getExtension("native_profiler");
+        $__internal_fd34be0c52ddf9a89b1860efb9fa4e1787a991fab00845fc9febc4b7db4aea3b->enter($__internal_fd34be0c52ddf9a89b1860efb9fa4e1787a991fab00845fc9febc4b7db4aea3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Ship edit</h1>
 
     ";
         // line 6
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
-        echo "
-        ";
-        // line 7
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'widget');
-        echo "
-        <input type=\"submit\" value=\"Edit\" />
+        if (($this->getAttribute((isset($context["ship"]) ? $context["ship"] : $this->getContext($context, "ship")), "name", array()) == "Tie Fighter")) {
+            // line 7
+            echo "      ";
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_tie_form"]) ? $context["edit_tie_form"] : $this->getContext($context, "edit_tie_form")), 'form_start');
+            echo "
+          ";
+            // line 8
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_tie_form"]) ? $context["edit_tie_form"] : $this->getContext($context, "edit_tie_form")), 'widget');
+            echo "
+          <input type=\"submit\" value=\"Edit\" />
+      ";
+            // line 10
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_tie_form"]) ? $context["edit_tie_form"] : $this->getContext($context, "edit_tie_form")), 'form_end');
+            echo "
     ";
-        // line 9
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
+        } else {
+            // line 12
+            echo "      ";
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
+            echo "
+        ";
+            // line 13
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'widget');
+            echo "
+        <input type=\"submit\" value=\"Edit\" />
+      ";
+            // line 15
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
+            echo "
+    ";
+        }
+        // line 17
         echo "
-
     <ul>
         <li>
             <a href=\"";
-        // line 13
+        // line 20
         echo $this->env->getExtension('routing')->getPath("ship_index");
         echo "\">Back to the list</a>
         </li>
         <li>
             ";
-        // line 16
+        // line 23
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_start');
         echo "
                 <input type=\"submit\" value=\"Delete\">
             ";
-        // line 18
+        // line 25
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_end');
         echo "
         </li>
     </ul>
 ";
         
-        $__internal_d8c824540062dc6c6de099ccc9c4e3f98c4b65c5ce736046cb5e8da4312f09fd->leave($__internal_d8c824540062dc6c6de099ccc9c4e3f98c4b65c5ce736046cb5e8da4312f09fd_prof);
+        $__internal_fd34be0c52ddf9a89b1860efb9fa4e1787a991fab00845fc9febc4b7db4aea3b->leave($__internal_fd34be0c52ddf9a89b1860efb9fa4e1787a991fab00845fc9febc4b7db4aea3b_prof);
 
     }
 
@@ -90,7 +111,7 @@ class __TwigTemplate_5a24c44a56bfec422b0330d89b205a5f4d84d4d2986da065991c7ae5391
 
     public function getDebugInfo()
     {
-        return array (  71 => 18,  66 => 16,  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  92 => 25,  87 => 23,  81 => 20,  76 => 17,  71 => 15,  66 => 13,  61 => 12,  56 => 10,  51 => 8,  46 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -98,10 +119,17 @@ class __TwigTemplate_5a24c44a56bfec422b0330d89b205a5f4d84d4d2986da065991c7ae5391
 /* {% block body %}*/
 /*     <h1>Ship edit</h1>*/
 /* */
-/*     {{ form_start(edit_form) }}*/
+/*     {% if ship.name == "Tie Fighter" %}*/
+/*       {{ form_start(edit_tie_form) }}*/
+/*           {{ form_widget(edit_tie_form) }}*/
+/*           <input type="submit" value="Edit" />*/
+/*       {{ form_end(edit_tie_form) }}*/
+/*     {% else %}*/
+/*       {{ form_start(edit_form) }}*/
 /*         {{ form_widget(edit_form) }}*/
 /*         <input type="submit" value="Edit" />*/
-/*     {{ form_end(edit_form) }}*/
+/*       {{ form_end(edit_form) }}*/
+/*     {% endif %}*/
 /* */
 /*     <ul>*/
 /*         <li>*/

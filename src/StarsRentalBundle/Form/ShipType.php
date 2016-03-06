@@ -20,7 +20,7 @@ class ShipType extends AbstractType
             ->add('avalability')
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

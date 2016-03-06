@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use StarsRentalBundle\Entity\Ship;
 use StarsRentalBundle\Form\ShipType;
+use StarsRentalBundle\Form\TieType;
 
 /**
  * Ship controller.
@@ -42,7 +43,7 @@ class ShipController extends Controller
     public function newAction(Request $request)
     {
         $ship = new Ship();
-        $form = $this->createForm('StarsRentalBundle\Form\ShipType', $ship);
+        $form = $this->createForm('StarsRentalBundle\Form\TieType', $ship);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -95,9 +96,21 @@ class ShipController extends Controller
             return $this->redirectToRoute('ship_edit', array('id' => $ship->getId()));
         }
 
+        $editTieForm = $this->createForm('StarsRentalBundle\Form\TieType', $ship);
+        $editTieForm->handleRequest($request);
+
+        if ($editTieForm->isSubmitted() && $editTieForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ship);
+            $em->flush();
+
+            return $this->redirectToRoute('ship_edit', array('id' => $ship->getId()));
+        }
+
         return $this->render('ship/edit.html.twig', array(
             'ship' => $ship,
             'edit_form' => $editForm->createView(),
+            'edit_tie_form' => $editTieForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

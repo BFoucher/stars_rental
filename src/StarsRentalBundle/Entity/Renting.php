@@ -38,14 +38,14 @@ class Renting
     /**
      * @var string
      *
-     * @ORM\OneToMany(targetEntity="Client", mappedBy="client")
+     * @ORM\ManyToOne(targetEntity="Client", inversedBy="client")
      */
     private $client;
 
     /**
      * @var string
      *
-     * @ORM\OneToMany(targetEntity="Ship", mappedBy="ship")
+     * @ORM\ManyToOne(targetEntity="Ship", inversedBy="ship")
      */
     private $ship;
 

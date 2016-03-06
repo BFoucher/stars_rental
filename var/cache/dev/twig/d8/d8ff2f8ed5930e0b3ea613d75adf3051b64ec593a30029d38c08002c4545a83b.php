@@ -21,28 +21,28 @@ class __TwigTemplate_5b312d74250407396fd604a295ee9c44aab4ecc512a6072a0275bdb1fc0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fa553a5927fbe19296f057043cecbcd4a7685e077e7bebc392c33b5db1a51053 = $this->env->getExtension("native_profiler");
-        $__internal_fa553a5927fbe19296f057043cecbcd4a7685e077e7bebc392c33b5db1a51053->enter($__internal_fa553a5927fbe19296f057043cecbcd4a7685e077e7bebc392c33b5db1a51053_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ship/index.html.twig"));
+        $__internal_74b79212ae78f4e46abb9939af82d6d1a7a8c6f85ccdc2413ca4bdb9fe990761 = $this->env->getExtension("native_profiler");
+        $__internal_74b79212ae78f4e46abb9939af82d6d1a7a8c6f85ccdc2413ca4bdb9fe990761->enter($__internal_74b79212ae78f4e46abb9939af82d6d1a7a8c6f85ccdc2413ca4bdb9fe990761_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ship/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fa553a5927fbe19296f057043cecbcd4a7685e077e7bebc392c33b5db1a51053->leave($__internal_fa553a5927fbe19296f057043cecbcd4a7685e077e7bebc392c33b5db1a51053_prof);
+        $__internal_74b79212ae78f4e46abb9939af82d6d1a7a8c6f85ccdc2413ca4bdb9fe990761->leave($__internal_74b79212ae78f4e46abb9939af82d6d1a7a8c6f85ccdc2413ca4bdb9fe990761_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6be7b69ca85ba462b674357ca365b0b27a89b8b61f02151b653f2c07e3682032 = $this->env->getExtension("native_profiler");
-        $__internal_6be7b69ca85ba462b674357ca365b0b27a89b8b61f02151b653f2c07e3682032->enter($__internal_6be7b69ca85ba462b674357ca365b0b27a89b8b61f02151b653f2c07e3682032_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_17fd9855610112cfae5ce8bf009288d8dc8f4bb58df8f6157b64189ffabe8c64 = $this->env->getExtension("native_profiler");
+        $__internal_17fd9855610112cfae5ce8bf009288d8dc8f4bb58df8f6157b64189ffabe8c64->enter($__internal_17fd9855610112cfae5ce8bf009288d8dc8f4bb58df8f6157b64189ffabe8c64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Ship list</h1>
 
-    <table>
+    <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Number</th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Avalability</th>
@@ -115,7 +115,7 @@ class __TwigTemplate_5b312d74250407396fd604a295ee9c44aab4ecc512a6072a0275bdb1fc0
     </ul>
 ";
         
-        $__internal_6be7b69ca85ba462b674357ca365b0b27a89b8b61f02151b653f2c07e3682032->leave($__internal_6be7b69ca85ba462b674357ca365b0b27a89b8b61f02151b653f2c07e3682032_prof);
+        $__internal_17fd9855610112cfae5ce8bf009288d8dc8f4bb58df8f6157b64189ffabe8c64->leave($__internal_17fd9855610112cfae5ce8bf009288d8dc8f4bb58df8f6157b64189ffabe8c64_prof);
 
     }
 
@@ -139,10 +139,10 @@ class __TwigTemplate_5b312d74250407396fd604a295ee9c44aab4ecc512a6072a0275bdb1fc0
 /* {% block body %}*/
 /*     <h1>Ship list</h1>*/
 /* */
-/*     <table>*/
+/*     <table class="table">*/
 /*         <thead>*/
 /*             <tr>*/
-/*                 <th>Id</th>*/
+/*                 <th>Number</th>*/
 /*                 <th>Name</th>*/
 /*                 <th>Category</th>*/
 /*                 <th>Avalability</th>*/
